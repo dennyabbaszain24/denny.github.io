@@ -25,7 +25,7 @@ function putarImg() {
     let i = 0;
     const waktuMulai = new Date().getTime();
     setInterval(function () {
-        if (new Date().getTime() - waktuMulai > 1000) {
+        if (new Date().getTime() - waktuMulai > 1500) {
             clearInterval;
             return;
         }
@@ -49,7 +49,7 @@ pilihan.forEach(function (pil) {
             const info = document.querySelector('.info')
             info.innerHTML = hasil;
 
-        }, 1000)
+        }, 2000)
 
 
         console.log('comp  ' + pilihanComputer)
