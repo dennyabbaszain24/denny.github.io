@@ -15,6 +15,7 @@ function getHasil(computer, player) {
     if (player == 'orang') return (computer == 'gajah') ? 'KALAH' : 'MENANG';
     if (player == 'semut') return (computer == 'orang') ? 'KALAH' : 'MENANG'; //versi IF ELSE ternary atau singkats
 
+
 }
 
 // fungsi transisi putar
@@ -25,7 +26,7 @@ function putarImg() {
     let i = 0;
     const waktuMulai = new Date().getTime();
     setInterval(function () {
-        if (new Date().getTime() - waktuMulai > 1500) {
+        if (new Date().getTime() - waktuMulai > 1000) {
             clearInterval;
             return;
         }
@@ -35,6 +36,8 @@ function putarImg() {
 }
 
 //event click mouse
+let p = 1
+let c = 1
 
 const pilihan = document.querySelectorAll('ul li img')
 pilihan.forEach(function (pil) {
@@ -43,23 +46,28 @@ pilihan.forEach(function (pil) {
         const pilihanPlayer = pil.className;
         const hasil = getHasil(pilihanComputer, pilihanPlayer)
         const imgComputer = document.querySelector('.img-komputer')
+
         putarImg();
+
         setTimeout(function () {
             imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png')
             const info = document.querySelector('.info')
             info.innerHTML = hasil;
+            //skor board
+            const player = document.querySelector('.skorP')
+            const comp = document.querySelector('.skorC')
 
-        }, 2000)
+            if (hasil == 'MENANG') return comp.innerHTML = p++
+
+            if (hasil == 'KALAH') return player.innerHTML = c++
+
+        }, 1300)
 
 
-        console.log('comp  ' + pilihanComputer)
-        console.log('hasil ' + hasil)
 
 
     })
 })
-
-
 
 
 

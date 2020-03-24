@@ -144,7 +144,7 @@ table {
 body {
     background-image: url(img/vexel.png);
     background-repeat: repeat;
-    font-family: thelight;
+    font-family: bebasneue;
 }
 
 h1 {
@@ -168,43 +168,45 @@ h1 {
 
 .area-komputer,
 .area-player {
-    border: 3px solid #18647a;
+    border: 1px solid #666666;
 }
 
 .area-komputer {
-    width: 560px;
-    height: 250px;
+    width: 480px;
+    height: 200px;
     margin: 5px auto;
-    background-color: rgb(151, 144, 149);
-    background: linear-gradient(to bottom, rgb(92, 91, 80) 0%, rgb(155, 26, 150) 100%);
+    background-color: rgb(43, 43, 43);
+    /* background: linear-gradient(to bottom, rgb(92, 91, 80) 0%, rgb(155, 26, 150) 100%); */
     position: relative;
     padding-top: 40px;
     box-sizing: border-box;
-    border-radius: 40px 40px 0 0;
+
+
 }
 
 .area-player {
-    width: 560px;
-    height: 250px;
+
+    width: 480px;
+    height: 200px;
     margin: 5px auto;
-    background-color: rgb(105, 94, 107);
-    background: linear-gradient(to bottom, rgb(70, 60, 219) 0%, rgb(70, 79, 82) 100%);
+    background-color: rgb(121, 121, 121);
+    /* background: linear-gradient(to bottom, rgb(70, 60, 219) 0%, rgb(70, 79, 82) 100%); */
     position: relative;
-    border-radius: 0 0 40px 40px;
+
 }
 
 .info {
     width: 150px;
     height: 60px;
-    border: 3px solid rgb(114, 196, 250);
+    border: 1px solid rgb(68, 68, 68);
     position: absolute;
     left: 50%;
     margin-left: -75px;
     top: 50%;
     margin-top: -30px;
     background-color: rgb(56, 56, 56);
-    border-radius: 30px;
-    z-index: 1;
+
+    z-index: 2;
     text-align: center;
     line-height: 60px;
     color: #d6cece;
@@ -224,8 +226,8 @@ li {
 }
 
 img {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     display: block;
     margin: auto;
     border-radius: 50%;
@@ -251,4 +253,47 @@ img {
 .semut:active,
 .orang:active {
     top: 2px;
+}
+
+.skorP {
+
+    width: 100px;
+    height: 60px;
+    border: 1px solid rgb(68, 68, 68);
+    position: absolute;
+    left: 10%;
+    margin-left: -75px;
+    top: 30%;
+    margin-top: -30px;
+    background-color: rgb(56, 56, 56);
+
+    z-index: 1;
+    text-align: center;
+    line-height: 60px;
+    color: #d6cece;
+    font-size: 30px;
+    font-weight: 10px;
+    text-shadow: 1px 1px 1px rgb(9, 243, 224);
+
+}
+
+.skorC {
+    width: 100px;
+    height: 60px;
+    border: 1px solid rgb(68, 68, 68);
+    position: absolute;
+    left: 10%;
+    margin-left: -75px;
+    bottom: 30%;
+    margin-top: -30px;
+    background-color: rgb(56, 56, 56);
+
+    z-index: 1;
+    text-align: center;
+    line-height: 60px;
+    color: #d6cece;
+    font-size: 30px;
+    font-weight: 10px;
+    text-shadow: 1px 1px 1px rgb(9, 243, 224);
+
 }
